@@ -1,0 +1,31 @@
+Exercice Portfolio :
+
+But: 
+Crée un portfolio qui ira chercher les infos des différents projet dans une BDD.
+Pouvoir ajouter/supprimer des projets par un système d'administration (formulaire).
+
+
+Etape:
+
+- Crée un répertoire GIT.
+- Crée une maquette du projet.
+- Crée un MCD => Work bench.
+- Importer le MCD sur phpmyadmin.
+- Préparer la structure des dossiers et fichiers.
+- Installer Symfony
+- Intégrer les vues.
+- Crée un formulaire pour ajouter des projets + en supprimer => 
+	Soit : * crée un système d'administration.
+	       * un système de login pour y accéder.
+
+Choix des technologies :
+
+**** FRONT ****
+
+- Materialize
+- Jquery
+
+**** BACK ****
+
+- BDD : MySQL
+- Symfony 4
