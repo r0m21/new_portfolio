@@ -8,9 +8,13 @@
     .color-2{color: #a6ed8e;}
     .color-3{color: #002d3d;}
 
-    .bg-color-1{background-color: #FDE9E0;}
 
-    .border-1{border: 3px solid #002d3d;}
+    .bg-transparent{background-color: transparent;}
+    .bg-color-1-opa{background-color: rgba(253, 233, 224, 0.5);}
+
+    .bg-img-1{background: url(../img/bg-header-4.png)no-repeat center center; background-size: cover;}
+
+    .border-1{border: 1px solid #002d3d;}
 
     /* Font size + font family */
 
@@ -42,7 +46,8 @@
 
         /* Menu button */
 
-        .uk-button-default, .uk-button-default:focus, .uk-button-default:hover{border: 1px solid #212121;}
+        .uk-button-default, .uk-button-default:focus, .uk-button-default:hover{border: 1px solid #fff; color: #fff;}
+
 
     /* ===========================================================================
                                     HOME PAGE
@@ -51,8 +56,8 @@
     .separator::after{      /* Séparateur centré */
         content: "";
         display: block;
-        height: 2px;
-        width: 80px;
+        height: 1px;
+        width: 120px;
         background-color: #212121;
         margin: 20px auto 0px;
         text-align: center;
