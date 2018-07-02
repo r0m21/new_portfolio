@@ -18,6 +18,9 @@
     .fs-25{font-size:25px;}
     .fs-30{font-size:30px;}
 
+
+    /* Margin + Padding */
+
     /* Height / Width */
     
     .w100{width:100%;}
@@ -45,6 +48,15 @@
                                     HOME PAGE
     =========================================================================== */
 
+    .separator::after{      /* Séparateur centré */
+        content: "";
+        display: block;
+        height: 2px;
+        width: 80px;
+        background-color: #212121;
+        margin: 20px auto 0px;
+        text-align: center;
+    }
 
 
 
