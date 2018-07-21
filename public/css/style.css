@@ -61,6 +61,9 @@
 
         .uk-button-default, .uk-button-default:focus, .uk-button-default:hover{border: 1px solid #E8910C; color: #fff;}
 
+        .uk-nav ul{
+            padding: 40px 0;
+        }
 
     /* ===========================================================================
                                     HOME PAGE
