@@ -4,13 +4,29 @@
 
 {% block content %}
 
-<section class="bg-img-1 h100vh uk-flex">
+<section class="bg-img-1 uk-flex uk-flex-column" uk-height-viewport="expand: true">
 
-    <div class="bg-color-1-opa uk-width-1-4 uk-margin-auto uk-margin-auto-vertical uk-flex uk-flex-column">
-        <h1 class="uk-text-uppercase uk-margin-auto uk-margin-small-bottom uk-margin-medium-top uk-text-medium color-3 fs-30 separator tagline">Romain wenger</h1>
-        <h3 class="uk-text-capitalize uk-margin-auto uk-margin-small-top uk-margin-medium-bottom color-3 fs-25 tagline">Développeur Web Junior</h3>
+    <div data-aos="fade-right" class="uk-width-1-4@m uk-width-2-3@s uk-width-2-3 uk-margin-auto uk-margin-auto-vertical uk-flex uk-flex-column border-1 text-center">
+        <h1 class="handlee uk-text-uppercase uk-margin-auto uk-margin-small-bottom uk-margin-medium-top uk-text-medium white fs-25 separator tagline">Romain wenger</h1>
+        <h3 class="handlee uk-text-capitalize uk-margin-auto uk-margin-small-top uk-margin-medium-bottom white fs-22 tagline">Développeur Web Junior</h3>
     </div>
 
+    <div data-aos-anchor-placement="center-bottom" data-aos="fade-up" class="uk-list uk-padding">
+        <ul class="uk-flex uk-flex-center uk-padding-remove">
+            <li class="">
+                <a href=""><i class="fab fa-linkedin-in white fs-20"></i></a>
+            </li>
+            <li class="uk-margin-medium-left">
+                <a href=""><i class="fab fa-facebook-f white fs-20"></i></a>
+            </li>
+            <li class="uk-margin-medium-left">
+                <a href=""><i class="fab fa-twitter white fs-20"></i></a>
+            </li>
+            <li class="uk-margin-medium-left">
+                <a href=""><i class="fab fa-github white fs-20"></i></a>
+            </li>
+        </ul>
+    </div>
 </section>
 
 {% endblock %}

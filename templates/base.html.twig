@@ -7,8 +7,9 @@
     <title>{% block title %}Portfolio{% endblock %}</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,500,700|Raleway:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="{{ asset('css/uikit.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/jquery-letterfx.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {% endblock %}
 </head>
@@ -23,7 +24,7 @@
     {% block javascripts %}
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/uikit.min.js') }}"></script>
-        <script src="{{ asset('js/jquery-letterfx.min.js') }}"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
     {% endblock %}
 </body>

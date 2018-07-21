@@ -1,14 +1,21 @@
 $(function(){
 
-    $(".tagline").letterfx({
+    AOS.init();
+ 
+    $('#button-nav,.uk-offcanvas-close').click(function(){
+        $('#button-nav').fadeToggle(1000);
+    }); 
 
-        "fx":"fly-top spin",
-        "backwards":false,
-        "timing":50,
-        "fx_duration":"3000ms",
-        "letter_end":"stay",
-        "element_end":"stay"
-    });
+    /* if($('.uk-offcanvas').css("display") == "none"){
+        $('#button-nav').show();
+        alert('oui');
+    } */
+    /* if($('.uk-offcanvas').css("display") == "none" && $('#button-nav').css("display") == "none"){
+
+        $('#button-nav').removeClass('none').addClass('d-block');
+       
+        alert('oui');
+    } */
 
 });
 

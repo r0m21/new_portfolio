@@ -2,34 +2,47 @@
                             CLASSE GENERIQUE
 =========================================================================== */
 
+    /* Display + Position */
+
+    .none{display:none;}
+    .d-block{display:block;}
+
     /* Color + background color & img + border */
 
+    .white{color:#fff;}
     .color-1{color: #fff;}
-    .color-2{color: #a6ed8e;}
+    .color-2{color: #E8910C;}
     .color-3{color: #002d3d;}
-
 
     .bg-transparent{background-color: transparent;}
     .bg-color-1-opa{background-color: rgba(253, 233, 224, 0.5);}
 
-    .bg-img-1{background: url(../img/bg-header-4.png)no-repeat center center; background-size: cover;}
+    .bg-img-1{background: url(../img/bg-header-4.jpg)no-repeat center center; background-size: cover;}
 
-    .border-1{border: 1px solid #002d3d;}
+    .border-1{border: 1px solid #E8910C;}
 
     /* Font size + font family */
 
     .fs-20{font-size:20px;}
+    .fs-22{font-size: 22px;}
     .fs-25{font-size:25px;}
     .fs-30{font-size:30px;}
 
+    .montserrat{font-family: 'Montserrat', arial, sans-serif;}
+    .raleway{font-family: 'Raleway', arial, sans-serif;}
+    .handlee{font-family: 'Handlee', arial, sans-serif;}
+    
 
     /* Margin + Padding */
 
     /* Height / Width */
-    
-    .w100{width:100%;}
 
     .h100vh{height: 100vh;}
+
+    /* Text align + justify */
+
+    .text-center{text-align:center;}
+
 /* ===========================================================================
                             CLASSE SPECIFIQUE
 =========================================================================== */
@@ -42,11 +55,11 @@
 
         .uk-offcanvas-bar{background-color: #002d3d;} /* Background off nav */
         .uk-offcanvas-bar a{color: #FFEBCD;}    /* Color liens */
-        .uk-offcanvas-bar a:hover{color: #fff;} /* Color liens hover */
+        .uk-offcanvas-bar a:hover{color: #E8910C;} /* Color liens hover */
 
         /* Menu button */
 
-        .uk-button-default, .uk-button-default:focus, .uk-button-default:hover{border: 1px solid #fff; color: #fff;}
+        .uk-button-default, .uk-button-default:focus, .uk-button-default:hover{border: 1px solid #E8910C; color: #fff;}
 
 
     /* ===========================================================================
@@ -58,11 +71,24 @@
         display: block;
         height: 1px;
         width: 120px;
-        background-color: #212121;
+        background-color: #fff;
         margin: 20px auto 0px;
         text-align: center;
     }
 
+    ul li .fab:hover{color:#E8910C;}
+    /* ===========================================================================
+                                    HOME PAGE
+    =========================================================================== */
 
 
+
+/* ===========================================================================
+                                MEDIA QUERIES
+=========================================================================== */
+
+@media (max-width: 640px)
+    {
+        .no-margin-right-xs{margin-right: 0px !important;}
+    }
 
