@@ -23,6 +23,7 @@
 
     /* Font size + font family */
 
+    .fs-16{font-size:16px;}
     .fs-20{font-size:20px;}
     .fs-22{font-size: 22px;}
     .fs-25{font-size:25px;}
@@ -46,6 +47,17 @@
 /* ===========================================================================
                             CLASSE SPECIFIQUE
 =========================================================================== */
+body::after, body::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 4px solid #E8910C;
+    z-index: 999;
+    pointer-events: none;
+}
 
     /* ===========================================================================
                                         NAV 
@@ -53,7 +65,12 @@
 
         /* Pour la nav en offcanvas */
 
-        .uk-offcanvas-bar{background-color: #002d3d;} /* Background off nav */
+        .uk-offcanvas-bar{      /* Background off nav */
+            background-color: #002d3d;
+            border-top: 4px solid #E8910C;
+            border-bottom: 4px solid #E8910C;
+            border-right: 4px solid #E8910C;
+        } 
         .uk-offcanvas-bar a{color: #FFEBCD;}    /* Color liens */
         .uk-offcanvas-bar a:hover{color: #E8910C;} /* Color liens hover */
 
