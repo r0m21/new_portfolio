@@ -10,7 +10,7 @@
     /* Color + background color & img + border */
 
     .white{color:#fff;}
-    .color-1{color: #fff;}
+    /* .color-1{color: #fff;} */
     .color-2{color: #E8910C;}
     .color-3{color: #002d3d;}
 
@@ -47,17 +47,6 @@
 /* ===========================================================================
                             CLASSE SPECIFIQUE
 =========================================================================== */
-body::after, body::before{
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    border: 4px solid #E8910C;
-    z-index: 999;
-    pointer-events: none;
-}
 
     /* ===========================================================================
                                         NAV 
@@ -67,11 +56,9 @@ body::after, body::before{
 
         .uk-offcanvas-bar{      /* Background off nav */
             background-color: #002d3d;
-            border-top: 4px solid #E8910C;
-            border-bottom: 4px solid #E8910C;
             border-right: 4px solid #E8910C;
         } 
-        .uk-offcanvas-bar a{color: #FFEBCD;}    /* Color liens */
+        
         .uk-offcanvas-bar a:hover{color: #E8910C;} /* Color liens hover */
 
         /* Menu button */
