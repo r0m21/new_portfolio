@@ -1,17 +1,101 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} - Romain Wenger{% endblock %}
+{% block title %}{{ parent() }} - Home{% endblock %}
 
 {% block content %}
 
-<section class="bg-img-1 section">
-    <div data-aos="fade-right" data-aos-duration="2000" class="border-1 text-center">
-        <h1 class="montserrat white fs-25 separator tagline">Romain wenger</h1>
-        <h3 class="montserrat white fs-22 tagline">Développeur Web Junior</h3>
-    </div>
-</section>
+<!-- Homepage -->
+    <section class="h100vh bg-img-1 d-flex align-self-end column">
 
-<section class="section">
-    <p>oui</p>
-</section>
+        {# Desktop / tablette version #}
+
+        <header>
+            <nav class="">
+                <div class="container m-auto d-flex justify-content-between p-20">
+                    <a href="">
+                        <img class="logo" src="../img/logo-orange.png" alt="Logo portfolio">
+                    </a>
+        
+                    <ul class="d-flex justify-content-around">
+                        <li class="align-self-center montserrat light fs-20">
+                            <a class="text-decoration-none white" href="">Home</a>
+                        </li>
+                        <li class="align-self-center montserrat light fs-20 ml-80">
+                        <a class="text-decoration-none white" href="#about">A propos</a>
+                        </li>
+                        <li class="align-self-center montserrat light fs-20 ml-80">
+                        <a class="text-decoration-none white" href="">Projets</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="m-auto align-self-center color-2 text-center">
+            <h1 class="titillium light fs-50 ls-40">ROMAIN WENGER</h1>
+            <h3 class="raleway medium fs-25 ls-15 pt-50">Développeur Web Junior</h3>
+        </div>
+
+    {# Réseaux sociaux + next  #}
+
+        <div class="w100">
+            <div class="container m-auto d-flex p-30">
+                <div class="d-flex justify-content-center w100">
+                    <a class="text-decoration-none color-2 d-flex align-self-end" href="">
+                        <i class="fab fa-facebook-f fs-25"></i>
+                    </a>
+
+                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="">
+                        <i class="fab fa-twitter fs-25"></i>
+                    </a>
+
+                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="">
+                        <i class="fab fa-linkedin-in fs-25"></i>
+                    </a>
+
+                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="">
+                        <i class="fab fa-github-alt fs-25"></i>
+                    </a>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <a class="text-decoration-none" href="#about">
+                        <h5 class="vertical-text raleway light fs-20 white">
+                            NEXT
+                            <i class="fas fa-long-arrow-alt-down"></i>
+                        </h5>
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </section>
+<!-- END Homepage -->
+
+<!-- A PROPOS -->
+    <section id="about" class="position-relative w100 h100vh bg-color-1 d-flex">
+
+        <div class="h100 w20 d-flex">
+            <h1 class="white vertical-text-title fs-70 raleway light text-center m-auto">A PROPOS</h1>
+        </div>
+
+        <div class="h100 w80 d-flex">
+
+            <div class="w50 d-flex">
+                <div class="w33 skill-1">oui</div>
+                <div class="w33 skill-2">oui</div>
+                <div class="w33 skill-3">non</div>
+            </div>
+
+            <div class="w50 d-flex">
+                <div class="w33 about-1">oui</div>
+                <div class="w33 about-2">oui</div>
+                <div class="w33 about-3">non</div>
+            </div>
+        </div>
+
+    <!-- SVG -->
+        <div class="bg-svg-w w100 h100"></div>
+        
+    </section>
+
 {% endblock %}

@@ -4,23 +4,28 @@ $(function(){
                     NO LIBRAIRIES / CODE JQUERY
 ====================================================================*/
 
-/* $('body').scrollspy({
-    target: '#navigation',
-    offset: $(window).height() / 2
-});
- */
+// Ajout des classes quand on scroll.
 
-// On Scroll
-/* $(window).on('scroll', function() {
+$(window).on('scroll', function() {
     var wScroll = $(this).scrollTop();
 
     // Fixed nav
-    wScroll > 1 ? $('#navigation').addClass('fixed-top justify-content-around sticky-nb-bg') : $('#navigation').removeClass('fixed-top justify-content-around sticky-nb-bg');
-    wScroll > 1 ? $('.nav-link').addClass('sticky-nb-liens') : $('.nav-link').removeClass('sticky-nb-liens');
-    wScroll > 1 ? $('#logo').attr('src', 'img/logo.png') : $('#logo').attr('src', 'img/logo-alt.png');
-                 
-}); */
+    wScroll > 1 ? $('#navigation').addClass('bg-nb-opa sticky-nb-border') : $('#navigation').removeClass('bg-nb-opa sticky-nb-border'); 
+    wScroll > 1 ? $('.nav-link').addClass('white') : $('.nav-link').removeClass('white');      
+    wScroll > 1 ? $('#logo').attr('src', '../img/logo.png') : $('#logo').attr('src', '../img/logo-orange.png');                          
+});
 
+// Fonction pour un effet smooth scroll tout les liens du site, soit la navbar.
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 /* ==================================================================
                             LIBRAIRIES
@@ -30,24 +35,6 @@ $(function(){
 
     AOS.init();
 
-/* END AOS.JS */
-
-/* FULLPAGE.JS */
-
-
-    $('#fullpage').fullpage({
-        //options here
-        autoScrolling:true,
-        scrollHorizontally: true
-    });
-    
-
-/* END FULLPAGE.JS */
+/* End AOS.JS */
 
 });
-
-
-
-
-
-
