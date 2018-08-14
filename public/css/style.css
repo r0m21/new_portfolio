@@ -21,6 +21,7 @@
     .justify-content-end{justify-content:flex-end;}
 
     .align-items-center{align-items:center;}
+    .align-items-end{align-items:flex-end;}
 
     .align-self-center{align-self:center;}
     .align-self-end{align-self:flex-end;}
@@ -36,13 +37,21 @@
 
     .bg-transparent{background-color: transparent;}
     .bg-color-1{background-color: #E8910C;}
+    .filter-black{background-color: rgba(0,0,0, .7);}
 
     .bg-img-1{background: url(../img/bg-header.png)no-repeat center center; background-size: cover;}
+
+    .svg-w, .svg-o{
+        position:absolute;
+        bottom:0;
+        right:0;
+    }
 
     .border-1{border: 1px solid #E8910C;}
 
     /* Font size + font family */
 
+    .fs-16{font-size:16px;}
     .fs-20{font-size:20px;}
     .fs-25{font-size:25px;}
     .fs-30{font-size:30px;}
@@ -60,24 +69,31 @@
     
     /* Letter Spacing + Line height */
 
+    .ls-10{letter-spacing: 10px;}
     .ls-15{letter-spacing: 15px;}
     .ls-40{letter-spacing: 40px;}
 
     /* Margin + Padding */
 
     .m-auto{margin:auto;}
+    .mlr-auto{margin:0 auto;}
 
+    .ml-15{margin-left:15px;}
     .ml-25{margin-left:25px;}
     .ml-40{margin-left:40px;}
     .ml-80{margin-left:80px;}
+
+    .mb-15{margin-bottom:15px;}
+    .mb-50{margin-bottom:50px;}
 
     .p-20{padding:20px;}
     .p-30{padding:30px;}
 
     .pt-50{padding-top:50px;}
-
+    
     .ptb-20{padding: 20px 0;}
     .ptb-40{padding:40px 0;}
+    .ptb-100{padding:100px 0;}
 
     /* Height / Width */
 
@@ -101,7 +117,8 @@
 
     /* Responsive élément */
 
-    .img-responsive{min-height:auto;width:auto;}
+    .img-responsive{max-height:100%;width:auto;}
+
 
 /* ===========================================================================
                             CLASSE SPECIFIQUE
@@ -110,21 +127,6 @@
     /* ===========================================================================
                                         NAV 
     =========================================================================== */
-
-        .bg-svg-o{
-            background: url('../img/polygon.svg') no-repeat bottom center;
-            background-size:contain;
-            position:absolute;
-            bottom:0;
-            right:0;
-        }
-        .bg-svg-w{
-            background: url('../img/polygon-w.svg') no-repeat bottom center;
-            background-size:contain;
-            position:absolute;
-            bottom:0;
-            right:0;
-        }
 
         .logo{height:70px; width:70px;}
 
@@ -138,9 +140,9 @@
         content: "";
         display: block;
         height: 1px;
-        width: 120px;
+        width: auto;
         background-color: #E8910C;
-        margin: 20px auto 0px;
+        margin: 20px 15px 0px;
         text-align: center;
     }
 
@@ -152,12 +154,36 @@
                                     A PROPOS
     =========================================================================== */
 
-    /* .skill-1{background: url('../img/')}
-    .skill-2{}
-    .skill-3{}
-    .about-1{}
-    .about-2{}
-    .about-3{} */
+    .about-1{background: url('../img/about-1.jpg') no-repeat center center;background-size:cover;}
+    .about-2{background: url('../img/about-2.jpeg') no-repeat center center;background-size:cover;}
+    .about-3{background: url('../img/about-3.jpg') no-repeat center center;background-size:cover;}
+   
+    .skill-2{background: url('../img/skill-2.jpg') no-repeat center center;background-size:cover;}
+    .skill-3{background: url('../img/skill-3.jpg') no-repeat center center;background-size:cover;}
+
+    .card-content
+    {
+        opacity:0;
+        position:absolute;
+        bottom:0;
+        top:0;
+        right:0;
+        left:0;
+    }
+
+    .card{overflow:hidden; position:relative;}
+
+    .boximg
+    {
+        -webkit-transition: -webkit-transform 1s;
+        transition: -webkit-transform 1s;
+        transition: transform 1s;
+        transition: transform 1s, -webkit-transform 1s;
+    }
+
+    .card:hover .card-content{opacity:1; transition: 1s;}
+    .card:hover .boximg{-webkit-transform: scale(1.2);transform: scale(1.2);} /* Effet zoom en hover */
+
 
 /* ===========================================================================
                                 MEDIA QUERIES

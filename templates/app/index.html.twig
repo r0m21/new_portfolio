@@ -73,7 +73,7 @@
 
 <!-- A PROPOS -->
     <section id="about" class="position-relative w100 h100vh bg-color-1 d-flex">
-
+        
         <div class="h100 w20 d-flex">
             <h1 class="white vertical-text-title fs-70 raleway light text-center m-auto">A PROPOS</h1>
         </div>
@@ -81,9 +81,41 @@
         <div class="h100 w80 d-flex">
 
             <div class="w50 d-flex">
-                <div class="w33 skill-1">oui</div>
+
+                <div class="w33 card">
+
+                    <div class="boximg h100">
+                        <img class="img-responsive" src="../img/skill-1.jpg" alt="About">
+                    </div>
+
+                    <article class="card-content d-flex column h100 m-auto filter-black">
+
+                        <h1 class="fs-25 ls-10 raleway regular text-center color-2 ptb-100 mlr-auto separator">Design</h1> 
+
+                        <div class="d-flex column mb-50">
+                            <p class="text-center white raleway regular fs-16 mb-15">UI / UX</p>
+                            <p class="text-center white raleway regular fs-16">Responsive Design</p>
+                        </div>
+
+                        <div class="d-flex column mb-50">
+                            <p class="text-center white raleway regular fs-16 mb-15">Adobe XD</p>
+                            <p class="text-center white raleway regular fs-16 mb-15">Photoshop</p>
+                            <p class="text-center white raleway regular fs-16">Illustrator</p>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-mobile-alt white fs-20 d-flex align-items-end"></i>
+                            <i class="fas fa-tablet-alt white fs-25 ml-15 d-flex align-items-end"></i>
+                            <i class="fas fa-desktop white fs-30 ml-15 d-flex align-items-end"></i>
+                        </div>
+                    
+                    </article>
+                    
+                </div>
+
                 <div class="w33 skill-2">oui</div>
                 <div class="w33 skill-3">non</div>
+
             </div>
 
             <div class="w50 d-flex">
@@ -94,8 +126,13 @@
         </div>
 
     <!-- SVG -->
-        <div class="bg-svg-w w100 h100"></div>
-        
+    <svg class="svg-w img-responsive" version="1.2" baseProfile="tiny" id="my-svg"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1600px" height="300px"
+    viewBox="0 0 1600 300" xml:space="preserve">
+        <polygon fill="#FFF" points="1606.581,312.701 -279.626,327.644 807.725,148.333 
+        1636.463,-6.839 "/>
+    </svg>
+
     </section>
 
 {% endblock %}
