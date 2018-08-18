@@ -69,6 +69,7 @@
     
     /* Letter Spacing + Line height */
 
+    .ls-5{letter-spacing: 5px;}
     .ls-10{letter-spacing: 10px;}
     .ls-15{letter-spacing: 15px;}
     .ls-40{letter-spacing: 40px;}
