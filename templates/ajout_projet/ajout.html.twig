@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello{% endblock %}
+
+{% block content %}
+
+<h1>Ajouter un projeyyyyyyyyyyy</h1>
+<br><br>
+
+    {{ form_start(ajoutForm) }}
+
+        {{ form_row(ajoutForm.PRO_nom, {'label': 'Nom du projet : '}) }}
+        {{ form_row(ajoutForm.PRO_desc, {'label': 'Description du projet'}) }}
+        {{ form_row(ajoutForm.PRO_techno, {'label': 'Techno utilisée : '}) }}
+        {{ form_row(ajoutForm.PRO_url, {'label': 'URL pour visionner le projet : '}) }}
+        {{ form_row(ajoutForm.PRO_image, {'label': 'Image'}) }}
+
+        <input type="submit" value="Envoyer">
+
+    {{ form_end(ajoutForm) }}
+
+    <a href="/">Retour</a>
+
+{% endblock %}

@@ -1,7 +1,0 @@
-<!-- Svg effet -->
-    <svg class="my-svg img-responsive" version="1.2" baseProfile="tiny" id="my-svg"
-    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1600px" height="300px"
-    viewBox="0 0 1600 300" xml:space="preserve">
-        <polygon fill="#FFF" points="1606.581,312.701 -279.626,327.644 807.725,148.333 
-        1636.463,-6.839 "/>
-    </svg>
