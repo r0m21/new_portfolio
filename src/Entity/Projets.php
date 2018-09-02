@@ -41,6 +41,11 @@ class Projets
      */
     private $PRO_url;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $PRO_boxprojet;
+
     public function getId()
     {
         return $this->id;
@@ -102,6 +107,18 @@ class Projets
     public function setPROUrl(string $PRO_url): self
     {
         $this->PRO_url = $PRO_url;
+
+        return $this;
+    }
+
+    public function getPROBoxprojet(): ?string
+    {
+        return $this->PRO_boxprojet;
+    }
+
+    public function setPROBoxprojet(string $PRO_boxprojet): self
+    {
+        $this->PRO_boxprojet = $PRO_boxprojet;
 
         return $this;
     }

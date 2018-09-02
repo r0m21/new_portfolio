@@ -3,6 +3,7 @@
 parameters:
     locale: 'en'
     photos_directory: '%kernel.project_dir%/public/img'
+    boxprojet_directory: '%kernel.project_dir%/public/img/box_projet'
 
 services:
     # default configuration for services in *this* file

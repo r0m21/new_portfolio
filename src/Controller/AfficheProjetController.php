@@ -20,11 +20,16 @@ class AfficheProjetController extends Controller
     {
         $repo = $this->getDoctrine()
         ->getRepository(Projets::class);
-        $projets = $repo->find($id);
+        $projets = $repo->findById($id);
+        
+        $idSuivant = $id + 1;
 
-        return $this->render('affiche_projet/index.html.twig', [
+        $suivant = $repo->findById($idSuivant);
+        dump($suivant);
+        return $this->render('affiche_projet/projet.html.twig', [
           
-            "projets" => $projets
+            "projets" => $projets,
+            "suivant" => $suivant,
             
         ]);
     }
@@ -41,6 +46,7 @@ class AfficheProjetController extends Controller
                      ->add('PRO_nom')
                      ->add('PRO_desc', TextareaType::class)
                      ->add('PRO_image', FileType::class)
+                     ->add('PRO_boxprojet', FileType::class)
                      ->add('PRO_techno')
                      ->add('PRO_url')
                      ->getForm();
@@ -52,8 +58,10 @@ class AfficheProjetController extends Controller
             /* @var Symfony\Component\HttpFoundation\File\UploadedFile $photo */
 
             $photo = $form->get('PRO_image')->getData();
+            $boxprojet = $form->get('PRO_boxprojet')->getData();
 
             $photoName = $this->generateUniqueFileName().'.'.$photo->guessExtension();
+            $boxprojetName = $this->generateUniqueFileName().'.'.$boxprojet->guessExtension();
 
             // déplace le fichier là où doit êtrs stocké
             $photo->move(
@@ -61,10 +69,16 @@ class AfficheProjetController extends Controller
                 $photoName
             );
 
+            $boxprojet->move(
+                $this->getParameter('boxprojet_directory'),
+                $boxprojetName
+            );
+
            // updates the 'photo' property to store the photo file name
            // instead of its contents
 
            $projet->setProImage($photoName);
+           $projet->setProBoxProjet($boxprojetName);
 
             $manager->persist($projet);
             $manager->flush();

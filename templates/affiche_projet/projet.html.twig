@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet{% endblock %}
+
+{% block content %}
+{% for projet in projets %}
+<section id="about" class="position-relative w100 h100vh d-flex" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
+    
+    <div class="h100 w20 d-flex border-r-1 filter-black item">
+        <h1 class="white vertical-text-title fs-70 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
+    </div>
+
+    <div class="w80">
+
+        <div class="d-flex m-auto justify-content-center">
+            <a class="color-1 text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }}">Voir le site</a>
+        </div>
+        
+
+        <div class="w50">
+            
+            <h3 class="raleway semi-bold fs-25 color-2 left-separator">Descriptif</h3>
+            <p class="montserrat fs-20 white">{{ projet.PRODesc }}</p>
+            
+            <h3 class="raleway semi-bold fs-25 color-2 left-separator">Technologie utilisées</h3>
+            <p class="montserrat fs-20 white">{{ projet.PROTechno }}</p>
+            
+        </div>
+        {% for s in suivant %}
+            {% if s %}
+                <a href="{{ s }}">Suivant</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+</section>
+    {% endfor %}
+{% endblock %}
