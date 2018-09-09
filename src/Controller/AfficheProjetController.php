@@ -20,16 +20,20 @@ class AfficheProjetController extends Controller
     {
         $repo = $this->getDoctrine()
         ->getRepository(Projets::class);
-        $projets = $repo->findById($id);
         
         $idSuivant = $id + 1;
+        $idPrecedent = $id - 1;
 
+        $projets = $repo->findById($id);
         $suivant = $repo->findById($idSuivant);
-        dump($suivant);
+        $precedent = $repo->findById($idPrecedent);
+        dump($precedent);
+
         return $this->render('affiche_projet/projet.html.twig', [
           
             "projets" => $projets,
             "suivant" => $suivant,
+            "precedent" => $precedent,
             
         ]);
     }

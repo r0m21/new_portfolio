@@ -92,6 +92,8 @@
     .ls-15{letter-spacing: 15px;}
     .ls-40{letter-spacing: 40px;}
 
+    .lh-25{line-height: 25px;}
+
     /* Margin + Padding */
 
     .m-auto{margin:auto;}
@@ -103,6 +105,8 @@
     .ml-80{margin-left:80px;}
 
     .mb-15{margin-bottom:15px;}
+    
+    .mb-30{margin-bottom:30px;}
     .mb-50{margin-bottom:50px;}
 
     .mt-20{margin-top:20px;}
@@ -117,6 +121,8 @@
     .ptb-40{padding:40px 0;}
     .ptb-100{padding:100px 0;}
     .ptb-100-35{padding:100px 0 35px;}
+
+    .p-30-20{padding:30px 20px;}
 
     /* Height / Width */
 
