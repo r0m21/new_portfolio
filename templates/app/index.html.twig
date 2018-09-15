@@ -12,15 +12,12 @@
 
         <header id="home">
             <nav class="">
-                <div class="container m-auto d-flex justify-content-between p-20">
+                <div class="container m-auto d-flex justify-content-between p-20 hidden-tablet">
                     <a href="">
                         <img class="logo" src="../img/logo-orange.png" alt="Logo portfolio">
                     </a>
         
                     <ul class="d-flex justify-content-around">
-                        <!-- <li class="align-self-center montserrat light fs-20">
-                            <a class="text-decoration-none white" href="#home">Home</a>
-                        </li> -->
                         <li class="align-self-center montserrat light fs-20 ml-80">
                         <a class="text-decoration-none white" href="#about">A propos</a>
                         </li>
@@ -28,6 +25,20 @@
                         <a class="text-decoration-none white" href="#projets">Projets</a>
                         </li>
                     </ul>
+                </div>
+                <div class="visible-mobile hidden-mobile">
+                    <button id="button-nav" class="nav-mobile">MENU</button>
+                    <div id="nav-mobile" class="h100vh overlay">
+                        <a id="close-nav" href="javascript:void(0)" class="closebtn">&times;</a>
+                        <ul class="d-flex justify-content-around column overlay-content">
+                            <li class="align-self-center montserrat light fs-20 ml-80">
+                                <a class="text-decoration-none white" href="#about">A propos</a>
+                            </li>
+                            <li class="align-self-center montserrat light fs-20 ml-80">
+                                <a class="text-decoration-none white" href="#projets">Projets</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -42,19 +53,19 @@
         <div class="w100">
             <div class="container m-auto d-flex p-30">
                 <div class="d-flex justify-content-center w100">
-                    <a class="text-decoration-none color-2 d-flex align-self-end" href="">
+                    <a class="text-decoration-none color-2 d-flex align-self-end" href="https://www.facebook.com/romain.wenger.98" target="_blank">
                         <i class="fab fa-facebook-f fs-25"></i>
                     </a>
 
-                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="">
+                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="https://twitter.com/Romain_WebDev" target="_blank">
                         <i class="fab fa-twitter fs-25"></i>
                     </a>
 
-                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="">
+                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="https://www.linkedin.com/in/romain-wenger/" target="_blank">
                         <i class="fab fa-linkedin-in fs-25"></i>
                     </a>
 
-                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="">
+                    <a class="text-decoration-none ml-40 color-2 d-flex align-self-end" href="https://github.com/r0m21" target="_blank">
                         <i class="fab fa-github-alt fs-25"></i>
                     </a>
                 </div>
