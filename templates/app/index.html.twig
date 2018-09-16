@@ -480,10 +480,10 @@
                 
                 <div class="w100 d-flex justify-content-around flex-wrap">       
                     {% for p in projets|slice(0, 6) %}
-                        <article class="box-projet w100-s position-relative mt-20">
+                        <article class="box-projet w80-s position-relative mt-20 mlr-auto">
                             <a class="text-decoration-none" href="/projet/{{ p.Id }}">
-                                <div class="box-img-projet w100-s">
-                                    <img class="img-projet w100-s" src="../img/box_projet/{{p.PROBoxprojet}}">
+                                <div class="box-img-projet w100-s box-img-projet">
+                                    <img class="responsive-image img-projet w100-s" src="../img/box_projet/{{p.PROBoxprojet}}">
                                 </div>
                                 <div class="box-content">
                                     <h3 class="fs-20 raleway regular color-2 h100 w100 d-flex justify-content-center align-items-center">{{ p.PRONom }}</h3> 

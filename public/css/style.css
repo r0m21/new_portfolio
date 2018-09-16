@@ -367,6 +367,7 @@
         .ls-20-s{letter-spacing: 20px;}
 
         .w100-s{width:100%;}
+        .w80-s{width:80%;}
 
     }
 
@@ -383,5 +384,6 @@
 
         .ls-5-xs{letter-spacing:5px;}
         
+        .w80-xs{width:80%;}
     }
 
