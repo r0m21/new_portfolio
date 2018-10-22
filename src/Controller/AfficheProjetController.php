@@ -27,7 +27,6 @@ class AfficheProjetController extends Controller
         $projets = $repo->findById($id);
         $suivant = $repo->findById($idSuivant);
         $precedent = $repo->findById($idPrecedent);
-        dump($precedent);
 
         return $this->render('affiche_projet/projet.html.twig', [
           
@@ -116,5 +115,5 @@ class AfficheProjetController extends Controller
     public function logout(){
 
     }
-
+    
 }
