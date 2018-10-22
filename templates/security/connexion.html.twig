@@ -5,17 +5,25 @@
 {% block content %}
 
     {% include 'include/header-back.html' %}
-
-    <form action="{{ path('security_login') }}" method="post"  class="col s12">
-
-        <label for="pseudo" class="">Identifiant</label>
-        <input class="" type="text" required name="_username" id="pseudo">
-
-        <label for="mdp" class="">Mot de passe</label>
-        <input type="password" required name="_password" id="mdp">
-
-        <input type="submit" value="Connexion" class="">
-
-    </form>
+    <section class="container m-auto d-flex column">
         
+        <h1 class="raleway medium pt-50 ptb-40 fs-25 ls-15 ls-5-xs ls-10-md fs-15-xs fs-20-md d-flex justify-content-center mb-30">CONNEXION</h1>
+    
+        <div class="d-flex justify-content-center">
+            <form action="{{ path('security_login') }}" method="post"  class="col s12">
+                <div class="d-flex justify-content-center column">
+                    <div>
+                        <label for="pseudo" class="color-1 fs-20 d-block pb-5 raleway light">Identifiant</label>
+                        <input class="button-form mb-20" type="text" required name="_username" id="pseudo">
+                    </div>    
+                    <div>
+                        <label for="mdp" class="color-1 fs-20 d-block pb-5 raleway light">Mot de passe</label>
+                        <input class="button-form" type="password" required name="_password" id="mdp">
+                    </div>
+                        
+                    <input class="submit-form m-auto mt-40" type="submit" value="Connexion" class="">
+                </div>
+            </form>
+        </div>
+    </section>
 {% endblock %}
