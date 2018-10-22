@@ -4,16 +4,18 @@
 
 {% block content %}
 
-<form action="{{ path('security_login') }}" method="post"  class="col s12">
-       
-    <label for="pseudo" class="">Identifiant</label>
-    <input class="" type="text" required name="_username" id="pseudo">
+    {% include 'include/header-back.html' %}
 
-    <label for="mdp" class="">Mot de passe</label>
-    <input type="password" required name="_password" id="mdp">
+    <form action="{{ path('security_login') }}" method="post"  class="col s12">
 
-    <input type="submit" value="Connexion" class="">
+        <label for="pseudo" class="">Identifiant</label>
+        <input class="" type="text" required name="_username" id="pseudo">
 
-</form>
+        <label for="mdp" class="">Mot de passe</label>
+        <input type="password" required name="_password" id="mdp">
 
+        <input type="submit" value="Connexion" class="">
+
+    </form>
+        
 {% endblock %}

@@ -125,6 +125,7 @@
     .mb-50{margin-bottom:50px;}
 
     .mt-20{margin-top:20px;}
+    .mt-40{margin-top:40px;}
 
     .p-10{padding:10px;}
     .p-20{padding:20px;}
@@ -133,6 +134,7 @@
     .pt-20{padding-top:20px;}
     .pt-50{padding-top:50px;}
     
+    .pb-5{padding-bottom:5px;}
     .pb-20{padding-bottom:20px;}
 
     .ptb-10{padding: 10px 0;}
@@ -187,6 +189,27 @@
     /* ===========================================================================
                                         NAV 
     =========================================================================== */
+        .button-form{
+            padding:10px;
+            font-size:20px;
+            border: 1px solid #E8910C;
+            width:280px;
+        }
+
+        .submit-form{
+            border: 1px solid #E8910C;
+            color:#E8910C;
+            background-color: transparent;
+            padding: 10px 20px;
+            font-size:25px;
+            transition: .5s ease;
+            cursor:pointer;
+        }
+        .submit-form:hover{
+            background-color: #E8910C;
+            color: #fff;
+            transition: .5s ease;
+        }
 
         .logo{height:70px; width:70px;}
 
