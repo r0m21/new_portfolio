@@ -3,96 +3,94 @@
 {% block title %}Projet{% endblock %}
 
 {% block content %}
-{% for projet in projets %}
-<section id="about" class="position-relative-xl w100 h100vh d-flex-xl" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
-    
-    <div class="w100 h100 visible-lg hidden-xl filter-black">
-        <div class="w100 h100 d-flex column align-items-center justify-content-between">
-    
-            <div class="w100 mt-20">
-                <h1 class="white fs-50 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
+    {% for projet in projets %}
+        <section id="about" class="position-relative-xl w100 h100vh d-flex-xl" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
+            <div class="w100 h100 visible-lg hidden-xl filter-black">
+                <div class="w100 h100 d-flex column align-items-center justify-content-between">
+            
+                    <div class="w100 mt-20">
+                        <h1 class="white fs-50 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
+                    </div>
+
+                    <div class="container w80-xs">
+                        <div class="d-flex column w100">
+                            <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Descriptif</h3>
+                            <p class="montserrat fs-16 white mb-30 lh-25">{{ projet.PRODesc }}</p>
+                            <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Technologie utilisées</h3>
+                            <p class="montserrat fs-16 white">{{ projet.PROTechno }}</p>
+                            <a class="white text-decoration-none text-center fs-30 raleway light mt-20" href="{{ projet.PROUrl }}">Voir le site</a>
+                        </div>
+                    </div>
+
+                    <div class="w100 d-flex mb-20">
+                        <div class="w33 text-center">
+                            {% for p in precedent %}
+                                {% if p %}
+                                    <a class="text-decoration-none white fs-16 raleway" href="{{ p.id }}">PRÉCÉDENT</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+            
+                        <div class="w33 text-center">
+                            <a class="text-decoration-none white fs-16 raleway" href="/">HOME</a>
+                        </div>
+            
+                        <div class="w33 text-center">
+                            {% for s in suivant %}
+                                {% if s %}
+                                    <a class="text-decoration-none white fs-16 raleway" href="{{ s.id }}">SUIVANT</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>            
+                </div>
             </div>
 
-            <div class="container w80-xs">
-                <div class="d-flex column w100">
-                    <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Descriptif</h3>
-                    <p class="montserrat fs-16 white mb-30 lh-25">{{ projet.PRODesc }}</p>
-                    <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Technologie utilisées</h3>
-                    <p class="montserrat fs-16 white">{{ projet.PROTechno }}</p>
-                    <a class="white text-decoration-none text-center fs-30 raleway light mt-20" href="{{ projet.PROUrl }}">Voir le site</a>
+            <div class="position-relative-xl h100vh-xl d-flex-xl hidden-lg visible-xl">
+
+                <div class="h100 w20 d-flex border-r-1 filter-black">
+                    <h1 class="white vertical-text-title fs-70 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
+                </div>
+            
+                <div class="w80 d-flex column align-items-center justify-content-around filter-black">
+            
+                    <div class="d-flex justify-content-center">
+                        <a class="white text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }}">Voir le site</a>
+                    </div>
+            
+                    <div class="w50 p-30-20">
+                        
+                        <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Descriptif</h3>
+                        <p class="montserrat fs-20 white mb-30 lh-25">{{ projet.PRODesc }}</p>
+                        
+                        <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Technologie utilisées</h3>
+                        <p class="montserrat fs-20 white">{{ projet.PROTechno }}</p>
+                        
+                    </div>
+            
+                    <div class="w100 d-flex">
+                        <div class="w33 text-center">
+                            {% for p in precedent %}
+                                {% if p %}
+                                    <a class="text-decoration-none white fs-16 raleway" href="{{ p.id }}">PRÉCÉDENT</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+            
+                        <div class="w33 text-center">
+                            <a class="text-decoration-none white fs-16 raleway" href="/">HOME</a>
+                        </div>
+            
+                        <div class="w33 text-center">
+                            {% for s in suivant %}
+                                {% if s %}
+                                    <a class="text-decoration-none white fs-16 raleway" href="{{ s.id }}">SUIVANT</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>        
                 </div>
             </div>
-
-            <div class="w100 d-flex mb-20">
-                <div class="w33 text-center">
-                    {% for p in precedent %}
-                        {% if p %}
-                            <a class="text-decoration-none white fs-16 raleway" href="{{ p.id }}">PRÉCÉDENT</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-    
-                <div class="w33 text-center">
-                    <a class="text-decoration-none white fs-16 raleway" href="/">HOME</a>
-                </div>
-    
-                <div class="w33 text-center">
-                    {% for s in suivant %}
-                        {% if s %}
-                            <a class="text-decoration-none white fs-16 raleway" href="{{ s.id }}">SUIVANT</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>            
-        </div>
-    </div>
-
-    <div class="position-relative-xl h100vh-xl d-flex-xl hidden-lg visible-xl">
-
-        <div class="h100 w20 d-flex border-r-1 filter-black">
-            <h1 class="white vertical-text-title fs-70 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
-        </div>
-    
-        <div class="w80 d-flex column align-items-center justify-content-around filter-black">
-    
-            <div class="d-flex justify-content-center">
-                <a class="white text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }}">Voir le site</a>
-            </div>
-    
-            <div class="w50 p-30-20">
-                
-                <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Descriptif</h3>
-                <p class="montserrat fs-20 white mb-30 lh-25">{{ projet.PRODesc }}</p>
-                
-                <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Technologie utilisées</h3>
-                <p class="montserrat fs-20 white">{{ projet.PROTechno }}</p>
-                
-            </div>
-    
-            <div class="w100 d-flex">
-                <div class="w33 text-center">
-                    {% for p in precedent %}
-                        {% if p %}
-                            <a class="text-decoration-none white fs-16 raleway" href="{{ p.id }}">PRÉCÉDENT</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-    
-                <div class="w33 text-center">
-                    <a class="text-decoration-none white fs-16 raleway" href="/">HOME</a>
-                </div>
-    
-                <div class="w33 text-center">
-                    {% for s in suivant %}
-                        {% if s %}
-                            <a class="text-decoration-none white fs-16 raleway" href="{{ s.id }}">SUIVANT</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>        
-        </div>
-    </div>
-
-</section>
+        </section>
     {% endfor %}
 {% endblock %}
