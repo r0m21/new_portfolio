@@ -4,22 +4,29 @@
 
 {% block content %}
 
-<h1>Ajouter un projeyyyyyyyyyyy</h1>
-<br><br>
+{# Desktop / Medium Desktop version #}
 
-    {{ form_start(ajoutForm) }}
+    {% include 'include/header-back.html' %}
 
-        {{ form_row(ajoutForm.PRO_nom, {'label': 'Nom du projet : '}) }}
-        {{ form_row(ajoutForm.PRO_desc, {'label': 'Description du projet'}) }}
-        {{ form_row(ajoutForm.PRO_techno, {'label': 'Techno utilisée : '}) }}
-        {{ form_row(ajoutForm.PRO_url, {'label': 'URL pour visionner le projet : '}) }}
-        {{ form_row(ajoutForm.PRO_image, {'label': 'Image'}) }}
-        {{ form_row(ajoutForm.PRO_boxprojet, {'label': 'Image pour la box en homepage'}) }}
+    <section class="container m-auto d-flex column">
+        <h1 class="raleway medium pt-50 ptb-40 fs-25 ls-15 ls-5-xs ls-10-md fs-15-xs fs-20-md d-flex justify-content-center mb-30">AJOUTER UN PROJET</h1>
 
-        <input type="submit" value="Envoyer">
+        <div class="d-flex justify-content-center">
+            {{ form_start(ajoutForm) }}
 
-    {{ form_end(ajoutForm) }}
-
-    <a href="/">Retour</a>
+                {{ form_row(ajoutForm.PRO_nom) }}
+                {{ form_row(ajoutForm.PRO_desc) }}
+                {{ form_row(ajoutForm.PRO_techno) }}
+                {{ form_row(ajoutForm.PRO_url) }}
+                {{ form_row(ajoutForm.PRO_image) }}
+                {{ form_row(ajoutForm.PRO_boxprojet) }}
+    
+                <input class="submit-form raleway medium d-flex m-auto mt-40" type="submit" value="Envoyer">
+        
+            {{ form_end(ajoutForm) }}
+        </div>
+       
+    </section>
+   
 
 {% endblock %}
