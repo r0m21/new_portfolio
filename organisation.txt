@@ -2,30 +2,26 @@ Portfolio :
 
 But: 
 Crée un portfolio qui ira chercher les infos des différents projet dans une BDD.
-Pouvoir ajouter/supprimer des projets par un système d'administration (formulaire).
+Pouvoir ajouter/supprimer des projets par un back-office.
 
 
 Etape:
 
+- Crée une maquette du projet.
 - Installer Symfony 4.
 - Crée un répertoire GIT.
-- Crée une maquette du projet.
 - Crée un MCD => Work bench.
-- Importer le MCD sur phpmyadmin.
-- Intégrer la maquette en utilisant le design pattern MVC.
-- Crée un formulaire pour ajouter des projets + en supprimer => 
+- Intégrer la maquette en utilisant symfony.
+- Crée un back-office à l'aide de symfony => 
 	Soit : * crée un système d'administration.
 	       * un système de login pour y accéder.
 
 Choix des technologies :
 
-**** FRONT ****
-
-- Uikit 3
-
 Librairie JS :
 
 - Jquery
+- AOS
 
 **** BACK ****
 
