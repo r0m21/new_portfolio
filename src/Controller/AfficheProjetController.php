@@ -158,8 +158,8 @@ class AfficheProjetController extends Controller
     /**
      * @Route("/mymeteo", name="mymeteo_projet")
      */
-    public function projet1(){
-        return $this->render('projets/index.html');
+    public function mymeteo(){
+        return $this->render('projets/mymeteo/index.html');
     }
     
 }
