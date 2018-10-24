@@ -8,7 +8,7 @@
             <div class="w100 h100 visible-lg hidden-xl filter-black">
                 <div class="w100 h100 d-flex column align-items-center justify-content-between">
             
-                    <div class="w100 mt-20">
+                    <div class="w100 mt-80">
                         <h1 class="white fs-50 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
                     </div>
 
@@ -18,7 +18,7 @@
                             <p class="montserrat fs-16 white mb-30 lh-25">{{ projet.PRODesc }}</p>
                             <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Technologie utilisées</h3>
                             <p class="montserrat fs-16 white">{{ projet.PROTechno }}</p>
-                            <a class="white text-decoration-none text-center fs-30 raleway light mt-20" href="{{ projet.PROUrl }}">Voir le site</a>
+                            <a class="white text-decoration-none text-center fs-30 raleway light mt-60" href="{{ projet.PROUrl }}" target="_blank">Voir le site</a>
                         </div>
                     </div>
 
@@ -55,17 +55,15 @@
                 <div class="w80 d-flex column align-items-center justify-content-around filter-black">
             
                     <div class="d-flex justify-content-center">
-                        <a class="white text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }}">Voir le site</a>
+                        <a class="white text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }} "target="_blank">Voir le site</a>
                     </div>
             
                     <div class="w50 p-30-20">
-                        
                         <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Descriptif</h3>
                         <p class="montserrat fs-20 white mb-30 lh-25">{{ projet.PRODesc }}</p>
                         
                         <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Technologie utilisées</h3>
                         <p class="montserrat fs-20 white">{{ projet.PROTechno }}</p>
-                        
                     </div>
             
                     <div class="w100 d-flex">
