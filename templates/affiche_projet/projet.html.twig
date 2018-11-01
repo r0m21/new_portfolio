@@ -4,15 +4,15 @@
 
 {% block content %}
     {% for projet in projets %}
-        <section id="about" class="position-relative-xl w100 h100vh d-flex-xl" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
+        <section id="about" class="position-relative-xl w100 min-h100vh d-flex-xl" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
             <div class="w100 h100 visible-lg hidden-xl filter-black">
                 <div class="w100 h100 d-flex column align-items-center justify-content-between">
             
-                    <div class="w100 mt-80">
+                    <div class="w100 mtb-30">
                         <h1 class="white fs-50 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
                     </div>
 
-                    <div class="container w80-xs">
+                    <div class="container w80-xs mtb-30">
                         <div class="d-flex column w100">
                             <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Descriptif</h3>
                             <p class="montserrat fs-16 white mb-30 lh-25">{{ projet.PRODesc }}</p>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
 
-                    <div class="w100 d-flex mb-20">
+                    <div class="w100 d-flex mb-20 mt-30">
                         <div class="w33 text-center">
                             {% for p in precedent %}
                                 {% if p %}
