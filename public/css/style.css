@@ -171,6 +171,7 @@
     .text-decoration-none{text-decoration:none;}
 
     .text-center{text-align:center;}
+    .text-justify{text-align:justify;}
     .vertical-text{writing-mode: vertical-rl;text-orientation: upright;}
     .vertical-text-title{writing-mode: vertical-rl; text-orientation: mixed;}
 
