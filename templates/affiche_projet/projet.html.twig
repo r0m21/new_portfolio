@@ -4,25 +4,27 @@
 
 {% block content %}
     {% for projet in projets %}
-        <section id="about" class="position-relative-xl w100 h100vh d-flex-xl" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
-            <div class="w100 h100 visible-lg hidden-xl filter-black">
-                <div class="w100 h100 d-flex column align-items-center justify-content-between">
+        <section id="about" class="position-relative-xl w100 min-h100vh d-flex-xl" style="background: url('../img/{{ projet.PROImage }}') no-repeat center center; background-size:cover;">
+            <div class="w100 min-h100vh visible-lg hidden-xl filter-black">
+                <div class="w100 min-h100vh d-flex column align-items-center justify-content-between">
             
-                    <div class="w100 mt-80">
-                        <h1 class="white fs-50 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
+                    <div class="w100 mtb-30">
+                        <h1 class="white fs-40 raleway light text-center m-auto">{{ projet.PRONom }}</h1>
                     </div>
 
-                    <div class="container w80-xs">
+                    <div class="container w80-xs mtb-30">
                         <div class="d-flex column w100">
-                            <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Descriptif</h3>
-                            <p class="montserrat fs-16 white mb-30 lh-25">{{ projet.PRODesc }}</p>
-                            <h3 class="raleway semi-bold fs-20 color-2 left-separator mb-15">Technologie utilisées</h3>
-                            <p class="montserrat fs-16 white">{{ projet.PROTechno }}</p>
-                            <a class="white text-decoration-none text-center fs-30 raleway light mt-60" href="{{ projet.PROUrl }}" target="_blank">Voir le site</a>
+                            <h3 class="montserrat regular fs-25 color-2 left-separator mb-15">Descriptif</h3>
+                            <p class="raleway fs-16 white mb-30 lh-25 text-justify">{{ projet.PRODesc|raw }}</p>
+                            <h3 class="montserrat regular fs-25 color-2 left-separator mb-15 mt-20">Technologie utilisées</h3>
+                            <p class="raleway fs-16 white text-justify">{{ projet.PROTechno }}</p>
+                            {% if projet.PROUrl is not empty %}
+                                <a class="white text-decoration-none text-center fs-30 raleway light mt-60" href="{{ projet.PROUrl }}" target="_blank">Voir le site</a>
+                            {% endif %}
                         </div>
                     </div>
 
-                    <div class="w100 d-flex mb-20">
+                    <div class="w100 d-flex mb-20 mt-30">
                         <div class="w33 text-center">
                             {% for p in precedent %}
                                 {% if p %}
@@ -55,17 +57,36 @@
                 <div class="w80 d-flex column align-items-center justify-content-around filter-black">
             
                     <div class="d-flex justify-content-center">
+                    {% if projet.PROUrl is not empty %}
                         <a class="white text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }} "target="_blank">Voir le site</a>
+                    {% endif %}
                     </div>
             
-                    <div class="w50 p-30-20">
-                        <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Descriptif</h3>
-                        <p class="montserrat fs-20 white mb-30 lh-25">{{ projet.PRODesc }}</p>
-                        
-                        <h3 class="raleway semi-bold fs-25 color-2 left-separator mb-15">Technologie utilisées</h3>
-                        <p class="montserrat fs-20 white">{{ projet.PROTechno }}</p>
+                    <div class="w80 d-flex">
+                        <div class="w50 p-30-20 d-flex column justify-content-center">
+                            <h3 class="montserrat regular fs-25 color-2 left-separator mb-15">Descriptif</h3>
+                            <div class="raleway fs-16 white mb-30 lh-25 text-justify">{{ projet.PRODesc|raw }}</div>
+                            
+                            <h3 class="montserrat regular fs-25 color-2 left-separator mb-15">Technologie utilisées</h3>
+                            <p class="raleway fs-16 white text-justify">{{ projet.PROTechno }}</p>
+                        </div>
+                        <div class="w50 d-flex justify-content-center align-items-center p-50">
+                            {% if projet.PRONom == "ChampiSpot" %}
+                                <img class="mw100" src="../img/preview-projet/formats-champispot.png" alt="ChampiSpot">
+                            {% elseif projet.PRONom == "Fuel-it" %}
+                                <img class="mw100" src="../img/preview-projet/formats-fuelit.png" alt="Fuel-it">
+                            {% elseif projet.PRONom == "GEMEMERATOR" %}
+                                <img class="mw100" src="../img/preview-projet/formats-genememerator.png" alt="Générateur meme">
+                            {% elseif projet.PRONom == "EasyAps" %}
+                                <img class="mw100" src="../img/preview-projet/formats-easyaps.png" alt="EasyAps">
+                            {% elseif projet.PRONom == "Book Guillaume W." %}
+                                <img class="mw100" src="../img/preview-projet/formats-book-gw.png" alt="Book Guillaume Wenger">
+                            {% elseif projet.PRONom == "MyMétéo" %}
+                                <img class="mw100" src="../img/preview-projet/formats-mymeteo.png" alt="MyMeteo">
+                            {% endif %}
+                            
+                        </div>
                     </div>
-            
                     <div class="w100 d-flex">
                         <div class="w33 text-center">
                             {% for p in precedent %}
