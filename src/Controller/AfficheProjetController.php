@@ -154,19 +154,4 @@ class AfficheProjetController extends Controller
     public function logout(){
 
     }
-
-    /**
-     * @Route("/mymeteo", name="mymeteo_projet")
-     */
-    public function mymeteo(){
-        return $this->render('projets/mymeteo/index.html');
-    }
-
-    /**
-     * @Route("/databeerbase", name="databeerbase_projet")
-     */
-    public function databeerbase(){
-        return $this->render('projets/databeerbase/index.php');
-    }
-    
 }
