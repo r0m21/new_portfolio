@@ -20,6 +20,8 @@
                             <p class="raleway fs-16 white text-justify">{{ projet.PROTechno }}</p>
                             {% if projet.PROUrl is not empty %}
                                 <a class="white text-decoration-none text-center fs-30 raleway light mt-60" href="{{ projet.PROUrl }}" target="_blank">Voir le site</a>
+                            {% else %}
+                                <h3 class="white text-center fs-25 raleway light mt-60">Projet en cours</h3>
                             {% endif %}
                         </div>
                     </div>
@@ -59,6 +61,8 @@
                     <div class="d-flex justify-content-center">
                     {% if projet.PROUrl is not empty %}
                         <a class="white text-decoration-none text-center fs-50 raleway light" href="{{ projet.PROUrl }} "target="_blank">Voir le site</a>
+                    {% else %}
+                        <h3 class="white text-center fs-40 raleway light">Projet en cours</h3>
                     {% endif %}
                     </div>
             
@@ -83,8 +87,7 @@
                                 <img class="mw100" src="../img/preview-projet/formats-book-gw.png" alt="Book Guillaume Wenger">
                             {% elseif projet.PRONom == "MyMétéo" %}
                                 <img class="mw100" src="../img/preview-projet/formats-mymeteo.png" alt="MyMeteo">
-                            {% endif %}
-                            
+                            {% endif %}                           
                         </div>
                     </div>
                     <div class="w100 d-flex">
