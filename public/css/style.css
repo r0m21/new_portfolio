@@ -1,5 +1,7 @@
 @import "reset.css";
 
+a:hover{color: #E8910C;} /* Color liens hover */
+
 /* ===========================================================================
                             CLASSE GENERIQUE
 =========================================================================== */
@@ -224,7 +226,22 @@
 
         .logo{height:70px; width:70px;}
 
-        a:hover{color: #E8910C;} /* Color liens hover */
+        .lien-nav:hover{color: #fff;}
+
+        .li-nav .lien-nav:after {
+            content: '';
+            display: block;
+            margin:auto;
+            margin-top: 5px;
+            height: 1px;
+            width: 0;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+        }
+        .li-nav .lien-nav:hover:after {
+            width: 90%;
+            background: #E8910C;
+        }
 
         /* Nav Mobile */
 
@@ -336,8 +353,8 @@
                                         PROJETS
     =========================================================================== */
 
-    .box-img-projet, .img-projet{width:350px;height:350px;}
-
+    .box-img-projet, .img-projet{width:250px;height:250px;}
+    
     .box-content{
         position: absolute;
         bottom: 10px;
