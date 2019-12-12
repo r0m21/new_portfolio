@@ -5,18 +5,13 @@
 {% block content %}
 
 <!-- Homepage -->
-
-    <section class="h100vh bg-img-1 d-flex align-self-end column">
+    <section id="homepage" class="h100vh bg-img-1 d-flex align-self-end column">
         <header id="home">
         {# Desktop / Medium Desktop version #}
             <nav class="">
-                <div class="container m-auto d-flex justify-content-between p-20 hidden-s">
-                    <a href="">
-                        <img class="logo" src="../img/logo-orange.png" alt="Logo portfolio">
-                    </a>
-        
+                <div class="container m-auto d-flex justify-content-center p-20 hidden-s">
                     <ul class="d-flex justify-content-around">
-                        <li class="li-nav align-self-center montserrat light fs-20 ml-80">
+                        <li class="li-nav align-self-center montserrat light fs-20">
                             <a class="lien-nav text-decoration-none white" href="#about">À PROPOS</a>
                         </li>
                         <li class="li-nav align-self-center montserrat light fs-20 ml-80">
@@ -50,13 +45,13 @@
 
         <div class="m-auto align-self-center color-2 text-center">
             <h1 class="titillium light fs-50 ls-40 ls-5-xs ls-20-s ls-30-md fs-25-xs fs-30-md">ROMAIN WENGER</h1>
-            <h3 class="raleway medium pt-50 fs-25 ls-15 ls-5-xs ls-10-md fs-15-xs fs-20-md">Développeur Web Junior</h3>
+            <h3 class="raleway medium pt-50 fs-25 ls-15 ls-5-xs ls-10-md fs-15-xs fs-20-md">Développeur front-end</h3>
         </div>
 
     {# Réseaux sociaux + next  #}
 
         <div class="w100">
-            <div class="container m-auto d-flex p-30">
+            <div class="container m-auto d-flex p-30 position-relative-xl">
                 <div class="d-flex justify-content-center w100">
                     <a class="text-decoration-none color-2 d-flex align-self-end" href="https://www.facebook.com/romain.wenger.98" target="_blank">
                         <i class="fab fa-facebook-f fs-25"></i>
@@ -75,7 +70,7 @@
                     </a>
                 </div>
 
-                <div class="position-absolute next-position hidden-lg">
+                <div class="position-absolute next-position-homepage hidden-lg">
                     <a class="text-decoration-none" href="#about">
                         <h5 class="vertical-text raleway light fs-14 white">
                             NEXT
@@ -174,8 +169,7 @@
                             <div class="d-flex column mb-20">
                                 <p class="text-center color-1 raleway regular fs-16 mb-10">Symfony 4</p>
                                 <p class="text-center color-1 raleway regular fs-16 mb-10">Twig</p>
-                                <p class="text-center color-1 raleway regular fs-16 mb-10">MVC</p>
-                                <p class="text-center color-1 raleway regular fs-16">POO</p>
+                                <p class="text-center color-1 raleway regular fs-16 mb-10">Pattern MVC</p>
                             </div>
                         
                         </div>
@@ -244,8 +238,6 @@
                             <div class="d-flex column mb-20 p-10">
                                 <p class="color-1 raleway regular fs-16 lh-20">
                                     Je suis un joueur de jeux vidéo depuis une 15aine d'années.
-                                    Mon style de jeu? Les FPS !
-                                    Le jeu qui m'aura le plus marqué ? Counter-strike !
                                     Ce que j'aime dans un jeu vidéo, c'est le côté compétitif et les stratégies que l'on peut établir avec son équipe.
                                 </p>
                             </div>
@@ -342,8 +334,7 @@
                                 <div class="d-flex column mb-50">
                                     <p class="text-center white raleway regular fs-16 mb-15">Symfony 4</p>
                                     <p class="text-center white raleway regular fs-16 mb-15">Twig</p>
-                                    <p class="text-center white raleway regular fs-16 mb-15">MVC</p>
-                                    <p class="text-center white raleway regular fs-16">POO</p>
+                                    <p class="text-center white raleway regular fs-16 mb-15">Pattern MVC</p>
                                 </div>
                             
                             </article>
@@ -414,8 +405,6 @@
                                     <div class="d-flex column mb-50 p-10">
                                         <p class="white raleway regular fs-16 lh-20">
                                             Je suis un joueur de jeux vidéo depuis une 15aine d'années.
-                                            Mon style de jeu? Les FPS !
-                                            Le jeu qui m'aura le plus marqué ? Counter-strike !
                                             Ce que j'aime dans un jeu vidéo, c'est le côté compétitif et les stratégies que l'on peut établir avec son équipe.
                                         </p>
                                     </div>
@@ -461,7 +450,7 @@
             <div class="w100">
                 
                 <div class="w100 d-flex justify-content-around flex-wrap pb-20">       
-                    {% for p in projets|slice(0, 6) %}
+                    {% for p in projets|slice(0, 3) %}
                         <article class="box-projet position-relative p-30">
                             <a class="text-decoration-none" href="/projet/{{ p.Id }}">
                                 <div class="box-img-projet">
@@ -484,8 +473,8 @@
         
                 <div class="h100 w80 d-flex">
         
-        {# 3 premiers bloc #}
-                    <div class="w50 d-flex">
+        {# 3 projets #}
+                    <div class="w100 d-flex">
         
                     {% for p in projets|slice(0, 3) %}
                         
@@ -507,31 +496,6 @@
                         
                     {% endfor %}
                         
-                    </div>
-        
-        {# 3 derniers bloc #}
-                    <div class="w50 d-flex">
-        
-                    {% for p in projets|slice(3, 6) %}
-                        
-                        <div class="w33 card">
-        
-                            <div class="boximg h100">
-                                <img class="img-responsive" src="../img/box_projet/{{p.PROBoxprojet}}" alt="Projet {{ p.PRONom }}">
-                            </div>
-                            
-                            <article class="card-content d-flex column filter-black">
-                                <div class="h-100 d-flex column align-items-center justify-content-center bg-color-2">
-                                    <h1 class="fs-20 raleway regular color-2">{{ p.PRONom }}</h1> 
-                                    <a class="mt-20" href="/projet/{{ p.Id }}">
-                                        <i class="fs-20 color-3 far fa-eye"></i>
-                                    </a>
-                                </div>
-                            </article> 
-                        </div>
-                        
-                    {% endfor %}
-        
                     </div>
                 </div>
         

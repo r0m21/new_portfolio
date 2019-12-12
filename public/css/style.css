@@ -2,6 +2,7 @@
 
 a:hover{color: #E8910C;} /* Color liens hover */
 
+
 /* ===========================================================================
                             CLASSE GENERIQUE
 =========================================================================== */
@@ -16,6 +17,7 @@ a:hover{color: #E8910C;} /* Color liens hover */
     .position-relative{position:relative;}
 
     .next-position{right:5%;bottom:5%;z-index:999;}
+    .next-position-homepage{right:-6%;bottom:50%;z-index:999;}
 
     .position-svg
     {
@@ -49,9 +51,10 @@ a:hover{color: #E8910C;} /* Color liens hover */
     .color-1{color: #002D3D;}
     .color-2{color: #E8910C;}
     .color-3{color: #212121;}
+    .color-4{color: #1b1f23;}
 
     .bg-transparent{background-color: transparent;}
-    .bg-color-1{background-color: #E8910C;}
+    .bg-color-1{background-color: #1b1f23;}
     .bg-color-2{background-color: #fff;}
     .bg-color-3{background-color: #eee;}
     .filter-black{background-color: rgba(0,0,0, .7);}
@@ -77,8 +80,9 @@ a:hover{color: #E8910C;} /* Color liens hover */
 
     .border-1{border: 1px solid #E8910C;}
     .border-2{border: 1px solid #ddd;}
+    
 
-    .border-r-1{border-right:1px solid #fff;}
+    .border-r-1{border-right:5px solid #E8910C;}
 
     /* Font size + font family */
 
@@ -382,7 +386,7 @@ a:hover{color: #E8910C;} /* Color liens hover */
 
       .position-relative-xl{position:relative;}
 
-      .bg-color-1-xl{background-color: #E8910C;}
+      .bg-color-1-xl{background-color: #1b1f23;}
 
       .h100vh-xl{height:100vh;}
     }
